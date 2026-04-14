@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>GitHub Profile README Generator</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+   
+   <script>
+       tailwind.config = {
+           theme: {
+               extend: {
+                   fontFamily: {
+                       sans: ['Inter', 'sans-serif'],
+                       mono: ['Fira Code', 'monospace'],
+                   },
+                   colors: {
+                       github: {
+                           dark: '#0d1117',
+                           darker: '#010409',
+                           border: '#30363d',
+                           text: '#c9d1d9',
+                           muted: '#8b949e',
+                           accent: '#58a6ff',
+                           success: '#238636',
+                           purple: '#8957e5',
+                           pink: '#db61a2',
+                       }
+                   }
+               }
+           }
+       }
+   </script>
+
+   <style>
+       body {
+           background-color: #0d1117;
+           color: #c9d1d9;
+       }
+       
+       .glass-panel {
+           background: rgba(22, 27, 34, 0.8);
+           backdrop-filter: blur(12px);
+           border: 1px solid #30363d;
+       }
+
+       .skill-tag {
+           transition: all 0.2s ease;
+       }
+       
+       .skill-tag:hover {
+           transform: translateY(-2px);
+           box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
+       }
+
+       .gradient-text {
+           background: linear-gradient(135deg, #58a6ff 0%, #db61a2 50%, #8957e5 100%);
+           -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;
+           background-clip: text;
+       }
+
+       .typing-cursor::after {
+           content: '|';
+           animation: blink 1s infinite;
+       }
+
+       @keyframes blink {
+           0%, 50% { opacity: 1; }
+           51%, 100% { opacity: 0; }
+       }
+
+       .stat-card {
+           background: linear-gradient(135deg, rgba(88, 166, 255, 0.1) 0%, rgba(137, 87, 229, 0.1) 100%);
+           border: 1px solid rgba(88, 166, 255, 0.2);
+       }
+
+       .contribution-grid {
+           display: grid;
+           grid-template-columns: repeat(52, 1fr);
+           gap: 3px;
+       }
+
+       .contribution-cell {
+           aspect-ratio: 1;
+           border-radius: 2px;
+           transition: all 0.2s;
+       }
+
+       .contribution-cell:hover {
+           transform: scale(1.2);
+           z-index: 10;
+       }
+
+       .level-0 { background: #161b22; }
+       .level-1 { background: #0e4429; }
+       .level-2 { background: #006d32; }
+       .level-3 { background: #26a641; }
+       .level-4 { background: #39d353; }
+
+       .code-preview {
+           background: #161b22;
+           border: 1px solid #30363d;
+       }
+
+       .tab-active {
+           border-bottom: 2px solid #f78166;
+           color: #c9d1d9;
+       }
+
+       .language-bar {
+           height: 8px;
+           border-radius: 4px;
+           display: flex;
+           overflow: hidden;
+       }
+
+       .glow-effect {
+           box-shadow: 0 0 20px rgba(88, 166, 255, 0.15);
+       }
+
+       /* Custom scrollbar */
+       ::-webkit-scrollbar {
+           width: 8px;
+           height: 8px;
+       }
+       ::-webkit-scrollbar-track {
+           background: #0d1117;
+       }
+       ::-webkit-scrollbar-thumb {
+           background: #30363d;
+           border-radius: 4px;
+       }
+       ::-webkit-scrollbar-thumb:hover {
+           background: #58a6ff;
+       }
+   </style>
+</head>
+<body class="min-h-screen">
+
+   <!-- Navigation -->
+   <nav class="border-b border-github-border bg-github-darker/80 backdrop-blur-md sticky top-0 z-50">
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div class="flex items-center justify-between h-16">
+               <div class="flex items-center gap-4">
+                   <i class="fab fa-github text-3xl text-white"></i>
+                   <div class="hidden md:flex items-center gap-4 text-sm">
+                       <span class="text-github-muted">Product</span>
+                       <span class="text-github-muted">Solutions</span>
+                       <span class="text-github-muted">Open Source</span>
+                       <span class="text-white font-medium">Profile</span>
+                   </div>
+               </div>
+               <div class="flex items-center gap-3">
+                   <button onclick="copyREADME()" class="flex items-center gap-2 px-4 py-2 bg-github-success hover:bg-opacity-90 text-white rounded-md text-sm font-medium transition-all">
+                       <i class="fas fa-copy"></i>
+                       <span>Copy README</span>
+                   </button>
+               </div>
+           </div>
+       </div>
+   </nav>
+
+   <!-- Main Content -->
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+       
+       <!-- Profile Header -->
+       <div class="flex flex-col lg:flex-row gap-8 mb-8">
+           <!-- Left Sidebar -->
+           <div class="lg:w-1/4 space-y-6">
+               <div class="relative">
+                   <div class="w-full aspect-square rounded-full border-4 border-github-border overflow-hidden glow-effect">
+                       <div class="w-full h-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center text-6xl font-bold text-white">
+                           AM
+                       </div>
+                   </div>
+                   <div class="absolute bottom-2 right-2 w-8 h-8 bg-github-darker rounded-full border-2 border-github-border flex items-center justify-center">
+                       <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                   </div>
+               </div>
+
+               <div>
+                   <h1 class="text-2xl font-bold text-white">Alex Morgan</h1>
+                   <p class="text-github-muted text-lg">alex-morgan</p>
+                   <p class="mt-2 text-github-text">Data Scientist & Creative Developer crafting interactive experiences and data-driven solutions.</p>
+               </div>
+
+               <button class="w-full py-2 px-4 border border-github-border rounded-md text-sm font-medium hover:border-github-muted transition-colors">
+                   Edit profile
+               </button>
+
+               <div class="flex items-center gap-2 text-sm text-github-muted">
+                   <i class="fas fa-users"></i>
+                   <span><strong class="text-white">2.4k</strong> followers</span>
+                   <span>·</span>
+                   <span><strong class="text-white">180</strong> following</span>
+               </div>
+
+               <div class="space-y-3 text-sm">
+                   <div class="flex items-center gap-3 text-github-muted">
+                       <i class="fas fa-building w-5"></i>
+                       <span>@TechCorp</span>
+                   </div>
+                   <div class="flex items-center gap-3 text-github-muted">
+                       <i class="fas fa-map-marker-alt w-5"></i>
+                       <span>San Francisco, CA</span>
+                   </div>
+                   <div class="flex items-center gap-3 text-github-muted">
+                       <i class="fas fa-envelope w-5"></i>
+                       <a href="#" class="hover:text-github-accent hover:underline">alex@example.com</a>
+                   </div>
+                   <div class="flex items-center gap-3 text-github-muted">
+                       <i class="fas fa-link w-5"></i>
+                       <a href="#" class="hover:text-github-accent hover:underline">https://alexmorgan.dev</a>
+                   </div>
+                   <div class="flex items-center gap-3 text-github-muted">
+                       <i class="fab fa-twitter w-5"></i>
+                       <a href="#" class="hover:text-github-accent hover:underline">@alexmorgan</a>
+                   </div>
+               </div>
+
+               <!-- Achievements -->
+               <div>
+                   <h3 class="text-sm font-semibold text-white mb-3">Achievements</h3>
+                   <div class="flex gap-2">
+                       <div class="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-lg" title="Starstruck">⭐</div>
+                       <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center text-lg" title="Galaxy Brain">🧠</div>
+                       <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center text-lg" title="Pull Request Master">🔥</div>
+                       <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center text-lg" title="Arctic Code Vault">❄️</div>
+                   </div>
+               </div>
+
+               <!-- Organizations -->
+               <div>
+                   <h3 class="text-sm font-semibold text-white mb-3">Organizations</h3>
+                   <div class="flex gap-2">
+                       <div class="w-10 h-10 rounded-md bg-github-border flex items-center justify-center text-lg hover:opacity-80 cursor-pointer">🏢</div>
+                       <div class="w-10 h-10 rounded-md bg-github-border flex items-center justify-center text-lg hover:opacity-80 cursor-pointer">⚛️</div>
+                       <div class="w-10 h-10 rounded-md bg-github-border flex items-center justify-center text-lg hover:opacity-80 cursor-pointer">🐍</div>
+                   </div>
+               </div>
+           </div>
+
+           <!-- Main Content Area -->
+           <div class="lg:w-3/4">
+               <!-- Tabs -->
+               <div class="border-b border-github-border mb-6">
+                   <nav class="flex gap-6 text-sm">
+                       <button class="pb-3 px-2 tab-active flex items-center gap-2">
+                           <i class="fas fa-book-open"></i>
+                           Overview
+                       </button>
+                       <button class="pb-3 px-2 text-github-muted hover:text-github-text flex items-center gap-2">
+                           <i class="fas fa-folder"></i>
+                           Repositories
+                           <span class="px-2 py-0.5 bg-github-border rounded-full text-xs">42</span>
+                       </button>
+                       <button class="pb-3 px-2 text-github-muted hover:text-github-text flex items-center gap-2">
+                           <i class="fas fa-table"></i>
+                           Projects
+                       </button>
+                       <button class="pb-3 px-2 text-github-muted hover:text-github-text flex items-center gap-2">
+                           <i class="fas fa-cube"></i>
+                           Packages
+                       </button>
+                       <button class="pb-3 px-2 text-github-muted hover:text-github-text flex items-center gap-2">
+                           <i class="fas fa-star"></i>
+                           Stars
+                           <span class="px-2 py-0.5 bg-github-border rounded-full text-xs">1.2k</span>
+                       </button>
+                   </nav>
+               </div>
+
+               <!-- README Preview -->
+               <div class="code-preview rounded-lg overflow-hidden" id="readme-content">
+                   
+                   <!-- README Header -->
+                   <div class="flex items-center justify-between px-4 py-3 border-b border-github-border bg-github-darker">
+                       <div class="flex items-center gap-2">
+                           <i class="fas fa-book text-github-muted"></i>
+                           <span class="text-sm font-semibold">README.md</span>
+                       </div>
+                       <div class="flex items-center gap-2">
+                           <button class="p-1.5 hover:bg-github-border rounded text-github-muted">
+                               <i class="fas fa-pencil-alt"></i>
+                           </button>
+                           <button class="p-1.5 hover:bg-github-border rounded text-github-muted">
+                               <i class="fas fa-ellipsis-h"></i>
+                           </button>
+                       </div>
+                   </div>
+
+                   <!-- README Body -->
+                   <div class="p-8 prose prose-invert max-w-none">
+                       
+                       <!-- Dynamic Intro -->
+                       <div class="mb-8">
+                           <h1 class="text-4xl font-bold mb-4">
+                               <span class="typing-cursor gradient-text">Hello, I'm Alex Morgan</span>
+                           </h1>
+                           <p class="text-xl text-github-muted leading-relaxed">
+                               Data Scientist & Creative Developer passionate about transforming complex data into 
+                               <span class="text-github-accent">compelling visual stories</span> and 
+                               <span class="text-github-purple">intelligent applications</span>.
+                           </p>
+                       </div>
+
+                       <!-- Badges -->
+                       <div class="flex flex-wrap gap-2 mb-8">
+                           <img src="https://img.shields.io/badge/Focus-Data%20Science-blue?style=flat-square&logo=python&logoColor=white" alt="Data Science">
+                           <img src="https://img.shields.io/badge/Role-Full%20Stack%20Developer-green?style=flat-square&logo=javascript&logoColor=white" alt="Full Stack">
+                           <img src="https://img.shields.io/badge/Location-San%20Francisco-orange?style=flat-square&logo=google-maps&logoColor=white" alt="Location">
+                           <img src="https://img.shields.io/badge/Open%20to-Collaboration-purple?style=flat-square&logo=handshake&logoColor=white" alt="Open to Work">
+                           <img src="https://komarev.com/ghpvc/?username=alex-morgan&color=blueviolet&style=flat-square" alt="Profile Views">
+                       </div>
+
+                       <!-- Tech Stack -->
+                       <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                           <i class="fas fa-layer-group text-github-accent"></i>
+                           Tech Stack
+                       </h2>
+                       
+                       <div class="grid md:grid-cols-2 gap-4 mb-8">
+                           <!-- Languages -->
+                           <div class="glass-panel rounded-lg p-4">
+                               <h3 class="font-semibold mb-3 flex items-center gap-2">
+                                   <i class="fas fa-code text-github-success"></i>
+                                   Languages
+                               </h3>
+                               <div class="flex flex-wrap gap-2">
+                                   <span class="skill-tag px-3 py-1.5 bg-[#3572A5]/20 text-[#3572A5] border border-[#3572A5]/30 rounded-md text-sm font-mono">
+                                       <i class="fab fa-python mr-1"></i>Python
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#f1e05a]/20 text-[#f1e05a] border border-[#f1e05a]/30 rounded-md text-sm font-mono">
+                                       <i class="fab fa-js mr-1"></i>JavaScript
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#3178c6]/20 text-[#3178c6] border border-[#3178c6]/30 rounded-md text-sm font-mono">
+                                       <i class="fas fa-code mr-1"></i>TypeScript
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#e34c26]/20 text-[#e34c26] border border-[#e34c26]/30 rounded-md text-sm font-mono">
+                                       <i class="fab fa-html5 mr-1"></i>HTML/CSS
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#00ADD8]/20 text-[#00ADD8] border border-[#00ADD8]/30 rounded-md text-sm font-mono">
+                                       <i class="fas fa-code mr-1"></i>Go
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#dea584]/20 text-[#dea584] border border-[#dea584]/30 rounded-md text-sm font-mono">
+                                       <i class="fas fa-code mr-1"></i>Rust
+                                   </span>
+                               </div>
+                           </div>
+
+                           <!-- Frameworks -->
+                           <div class="glass-panel rounded-lg p-4">
+                               <h3 class="font-semibold mb-3 flex items-center gap-2">
+                                   <i class="fas fa-cubes text-github-purple"></i>
+                                   Frameworks & Libraries
+                               </h3>
+                               <div class="flex flex-wrap gap-2">
+                                   <span class="skill-tag px-3 py-1.5 bg-[#61DAFB]/20 text-[#61DAFB] border border-[#61DAFB]/30 rounded-md text-sm font-mono">
+                                       <i class="fab fa-react mr-1"></i>React
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#000000]/40 text-white border border-white/30 rounded-md text-sm font-mono">
+                                       <i class="fas fa-code mr-1"></i>Next.js
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#06B6D4]/20 text-[#06B6D4] border border-[#06B6D4]/30 rounded-md text-sm font-mono">
+                                       <i class="fas fa-wind mr-1"></i>Tailwind
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#3776AB]/20 text-[#3776AB] border border-[#3776AB]/30 rounded-md text-sm font-mono">
+                                       <i class="fas fa-brain mr-1"></i>TensorFlow
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#FF6F00]/20 text-[#FF6F00] border border-[#FF6F00]/30 rounded-md text-sm font-mono">
+                                       <i class="fas fa-fire mr-1"></i>PyTorch
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#092E20]/40 text-[#44B78B] border border-[#44B78B]/30 rounded-md text-sm font-mono">
+                                       <i class="fab fa-python mr-1"></i>Django
+                                   </span>
+                               </div>
+                           </div>
+
+                           <!-- Data & Cloud -->
+                           <div class="glass-panel rounded-lg p-4">
+                               <h3 class="font-semibold mb-3 flex items-center gap-2">
+                                   <i class="fas fa-database text-github-pink"></i>
+                                   Data & Cloud
+                               </h3>
+                               <div class="flex flex-wrap gap-2">
+                                   <span class="skill-tag px-3 py-1.5 bg-[#FF9900]/20 text-[#FF9900] border border-[#FF9900]/30 rounded-md text-sm font-mono">
+                                       <i class="fab fa-aws mr-1"></i>AWS
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#4285F4]/20 text-[#4285F4] border border-[#4285F4]/30 rounded-md text-sm font-mono">
+                                       <i class="fas fa-cloud mr-1"></i>GCP
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#336791]/20 text-[#336791] border border-[#336791]/30 rounded-md text-sm font-mono">
+                                       <i class="fas fa-database mr-1"></i>PostgreSQL
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#47A248]/20 text-[#47A248] border border-[#47A248]/30 rounded-md text-sm font-mono">
+                                       <i class="fas fa-leaf mr-1"></i>MongoDB
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#E31937]/20 text-[#E31937] border border-[#E31937]/30 rounded-md text-sm font-mono">
+                                       <i class="fas fa-stream mr-1"></i>Kafka
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#E25A1C]/20 text-[#E25A1C] border border-[#E25A1C]/30 rounded-md text-sm font-mono">
+                                       <i class="fas fa-fire mr-1"></i>Spark
+                                   </span>
+                               </div>
+                           </div>
+
+                           <!-- Tools -->
+                           <div class="glass-panel rounded-lg p-4">
+                               <h3 class="font-semibold mb-3 flex items-center gap-2">
+                                   <i class="fas fa-tools text-yellow-500"></i>
+                                   Tools & DevOps
+                               </h3>
+                               <div class="flex flex-wrap gap-2">
+                                   <span class="skill-tag px-3 py-1.5 bg-[#2496ED]/20 text-[#2496ED] border border-[#2496ED]/30 rounded-md text-sm font-mono">
+                                       <i class="fab fa-docker mr-1"></i>Docker
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#326CE5]/20 text-[#326CE5] border border-[#326CE5]/30 rounded-md text-sm font-mono">
+                                       <i class="fas fa-dharmachakra mr-1"></i>Kubernetes
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#181717]/40 text-white border border-white/30 rounded-md text-sm font-mono">
+                                       <i class="fab fa-github mr-1"></i>GitHub Actions
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#F05032]/20 text-[#F05032] border border-[#F05032]/30 rounded-md text-sm font-mono">
+                                       <i class="fab fa-git mr-1"></i>Git
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#FC6D26]/20 text-[#FC6D26] border border-[#FC6D26]/30 rounded-md text-sm font-mono">
+                                       <i class="fas fa-code-branch mr-1"></i>GitLab CI
+                                   </span>
+                                   <span class="skill-tag px-3 py-1.5 bg-[#7B42BC]/20 text-[#7B42BC] border border-[#7B42BC]/30 rounded-md text-sm font-mono">
+                                       <i class="fas fa-code mr-1"></i>Terraform
+                                   </span>
+                               </div>
+                           </div>
+                       </div>
+
+                       <!-- GitHub Stats -->
+                       <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                           <i class="fas fa-chart-bar text-github-accent"></i>
+                           GitHub Analytics
+                       </h2>
+
+                       <div class="grid md:grid-cols-2 gap-4 mb-8">
+                           <img src="https://github-readme-stats.vercel.app/api?username=alex-morgan&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9" alt="GitHub Stats" class="w-full rounded-lg">
+                           <img src="https://github-readme-streak-stats.herokuapp.com/?user=alex-morgan&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=30363d&ring=58a6ff&fire=ff6b6b&currStreakLabel=58a6ff" alt="GitHub Streak" class="w-full rounded-lg">
+                       </div>
+
+                       <div class="mb-8">
+                           <img src="https://github-readme-activity-graph.vercel.app/graph?username=alex-morgan&bg_color=0d1117&color=58a6ff&line=8957e5&point=db61a2&area=true&hide_border=true&custom_title=Contribution%20Graph" alt="Activity Graph" class="w-full rounded-lg">
+                       </div>
+
+                       <!-- Contribution Calendar -->
+                       <h3 class="text-lg font-semibold mb-4">Contribution Calendar</h3>
+                       <div class="glass-panel rounded-lg p-4 mb-2">
+                           <div class="contribution-grid" id="contribution-grid">
+                               <!-- Generated by JS -->
+                           </div>
+                       </div>
+                       <div class="flex items-center justify-end gap-2 text-xs text-github-muted">
+                           <span>Less</span>
+                           <div class="w-3 h-3 rounded-sm level-0"></div>
+                           <div class="w-3 h-3 rounded-sm level-1"></div>
+                           <div class="w-3 h-3 rounded-sm level-2"></div>
+                           <div class="w-3 h-3 rounded-sm level-3"></div>
+                           <div class="w-3 h-3 rounded-sm level-4"></div>
+                           <span>More</span>
+                       </div>
+
+                       <!-- Language Stats -->
+                       <h2 class="text-2xl font-bold mb-4 flex items-center gap-2 mt-8">
+                           <i class="fas fa-pie-chart text-github-accent"></i>
+                           Language Distribution
+                       </h2>
+
+                       <div class="glass-panel rounded-lg p-6 mb-8">
+                           <div class="language-bar mb-4">
+                               <div style="width: 45%; background: #3572A5;" title="Python 45%"></div>
+                               <div style="width: 25%; background: #f1e05a;" title="JavaScript 25%"></div>
+                               <div style="width: 15%; background: #3178c6;" title="TypeScript 15%"></div>
+                               <div style="width: 10%; background: #00ADD8;" title="Go 10%"></div>
+                               <div style="width: 5%; background: #dea584;" title="Rust 5%"></div>
+                           </div>
+                           <div class="flex flex-wrap gap-4 text-sm">
+                               <div class="flex items-center gap-2">
+                                   <div class="w-3 h-3 rounded-full" style="background: #3572A5;"></div>
+                                   <span>Python 45%</span>
+                               </div>
+                               <div class="flex items-center gap-2">
+                                   <div class="w-3 h-3 rounded-full" style="background: #f1e05a;"></div>
+                                   <span>JavaScript 25%</span>
+                               </div>
+                               <div class="flex items-center gap-2">
+                                   <div class="w-3 h-3 rounded-full" style="background: #3178c6;"></div>
+                                   <span>TypeScript 15%</span>
+                               </div>
+                               <div class="flex items-center gap-2">
+                                   <div class="w-3 h-3 rounded-full" style="background: #00ADD8;"></div>
+                                   <span>Go 10%</span>
+                               </div>
+                               <div class="flex items-center gap-2">
+                                   <div class="w-3 h-3 rounded-full" style="background: #dea584;"></div>
+                                   <span>Rust 5%</span>
+                               </div>
+                           </div>
+                       </div>
+
+                       <!-- Featured Projects -->
+                       <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                           <i class="fas fa-star text-yellow-500"></i>
+                           Featured Projects
+                       </h2>
+
+                       <div class="grid md:grid-cols-2 gap-4 mb-8">
+                           <a href="#" class="glass-panel rounded-lg p-4 hover:border-github-accent transition-all group">
+                               <div class="flex items-start justify-between mb-2">
+                                   <h3 class="font-semibold text-github-accent group-hover:underline">predictive-analytics-platform</h3>
+                                   <span class="text-xs text-github-muted border border-github-border px-2 py-0.5 rounded-full">Public</span>
+                               </div>
+                               <p class="text-sm text-github-muted mb-4">Real-time forecasting system using TensorFlow and React, processing 1M+ data points daily.</p>
+                               <div class="flex items-center gap-4 text-xs text-github-muted">
+                                   <span class="flex items-center gap-1"><div class="w-3 h-3 rounded-full bg-[#3572A5]"></div> Python</span>
+                                   <span class="flex items-center gap-1"><i class="fas fa-star"></i> 234</span>
+                                   <span class="flex items-center gap-1"><i class="fas fa-code-branch"></i> 45</span>
+                               </div>
+                           </a>
+
+                           <a href="#" class="glass-panel rounded-lg p-4 hover:border-github-accent transition-all group">
+                               <div class="flex items-start justify-between mb-2">
+                                   <h3 class="font-semibold text-github-accent group-hover:underline">carbon-footprint-tracker</h3>
+                                   <span class="text-xs text-github-muted border border-github-border px-2 py-0.5 rounded-full">Public</span>
+                               </div>
+                               <p class="text-sm text-github-muted mb-4">Interactive dashboard for enterprises to monitor and optimize their environmental impact.</p>
+                               <div class="flex items-center gap-4 text-xs text-github-muted">
+                                   <span class="flex items-center gap-1"><div class="w-3 h-3 rounded-full bg-[#f1e05a]"></div> JavaScript</span>
+                                   <span class="flex items-center gap-1"><i class="fas fa-star"></i> 189</span>
+                                   <span class="flex items-center gap-1"><i class="fas fa-code-branch"></i> 32</span>
+                               </div>
+                           </a>
+
+                           <a href="#" class="glass-panel rounded-lg p-4 hover:border-github-accent transition-all group">
+                               <div class="flex items-start justify-between mb-2">
+                                   <h3 class="font-semibold text-github-accent group-hover:underline">ml-pipeline-framework</h3>
+                                   <span class="text-xs text-github-muted border border-github-border px-2 py-0.5 rounded-full">Public</span>
+                               </div>
+                               <p class="text-sm text-github-muted mb-4">Scalable machine learning pipeline framework with Apache Kafka and Spark integration.</p>
+                               <div class="flex items-center gap-4 text-xs text-github-muted">
+                                   <span class="flex items-center gap-1"><div class="w-3 h-3 rounded-full bg-[#3572A5]"></div> Python</span>
+                                   <span class="flex items-center gap-1"><i class="fas fa-star"></i> 567</span>
+                                   <span class="flex items-center gap-1"><i class="fas fa-code-branch"></i> 89</span>
+                               </div>
+                           </a>
+
+                           <a href="#" class="glass-panel rounded-lg p-4 hover:border-github-accent transition-all group">
+                               <div class="flex items-start justify-between mb-2">
+                                   <h3 class="font-semibold text-github-accent group-hover:underline">data-viz-components</h3>
+                                   <span class="text-xs text-github-muted border border-github-border px-2 py-0.5 rounded-full">Public</span>
+                               </div>
+                               <p class="text-sm text-github-muted mb-4">Reusable React components for advanced data visualization with D3.js integration.</p>
+                               <div class="flex items-center gap-4 text-xs text-github-muted">
+                                   <span class="flex items-center gap-1"><div class="w-3 h-3 rounded-full bg-[#3178c6]"></div> TypeScript</span>
+                                   <span class="flex items-center gap-1"><i class="fas fa-star"></i> 423</span>
+                                   <span class="flex items-center gap-1"><i class="fas fa-code-branch"></i> 67</span>
+                               </div>
+                           </a>
+                       </div>
+
+                       <!-- Connect -->
+                       <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                           <i class="fas fa-handshake text-github-accent"></i>
+                           Let's Connect
+                       </h2>
+
+                       <p class="text-github-muted mb-4">I'm always interested in hearing about new projects and opportunities. Feel free to reach out!</p>
+
+                       <div class="flex flex-wrap gap-3">
+                           <a href="#" class="flex items-center gap-2 px-4 py-2 bg-[#1DA1F2]/20 text-[#1DA1F2] border border-[#1DA1F2]/30 rounded-lg hover:bg-[#1DA1F2]/30 transition-all">
+                               <i class="fab fa-twitter"></i> Twitter
+                           </a>
+                           <a href="#" class="flex items-center gap-2 px-4 py-2 bg-[#0A66C2]/20 text-[#0A66C2] border border-[#0A66C2]/30 rounded-lg hover:bg-[#0A66C2]/30 transition-all">
+                               <i class="fab fa-linkedin"></i> LinkedIn
+                           </a>
+                           <a href="#" class="flex items-center gap-2 px-4 py-2 bg-[#EA4335]/20 text-[#EA4335] border border-[#EA4335]/30 rounded-lg hover:bg-[#EA4335]/30 transition-all">
+                               <i class="fas fa-envelope"></i> Email
+                           </a>
+                           <a href="#" class="flex items-center gap-2 px-4 py-2 bg-[#FF4500]/20 text-[#FF4500] border border-[#FF4500]/30 rounded-lg hover:bg-[#FF4500]/30 transition-all">
+                               <i class="fab fa-reddit"></i> Reddit
+                           </a>
+                           <a href="#" class="flex items-center gap-2 px-4 py-2 bg-[#5865F2]/20 text-[#5865F2] border border-[#5865F2]/30 rounded-lg hover:bg-[#5865F2]/30 transition-all">
+                               <i class="fab fa-discord"></i> Discord
+                           </a>
+                       </div>
+
+                       <!-- Footer -->
+                       <div class="mt-12 pt-8 border-t border-github-border text-center text-sm text-github-muted">
+                           <p>💡 <em>"The goal is to turn data into information, and information into insight."</em></p>
+                       </div>
+
+                   </div>
+               </div>
+
+           </div>
+       </div>
+   </div>
+
+   <!-- Copy Notification -->
+   <div id="copy-notification" class="fixed bottom-8 right-8 bg-github-success text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 flex items-center gap-2">
+       <i class="fas fa-check-circle"></i>
+       <span>README copied to clipboard!</span>
+   </div>
+
+   <script>
+       // Generate contribution grid
+       const grid = document.getElementById('contribution-grid');
+       const levels = ['level-0', 'level-0', 'level-0', 'level-1', 'level-1', 'level-2', 'level-2', 'level-3', 'level-4'];
+       
+       for (let i = 0; i < 364; i++) {
+           const cell = document.createElement('div');
+           const randomLevel = levels[Math.floor(Math.random() * levels.length)];
+           cell.className = `contribution-cell ${randomLevel}`;
+           cell.title = `${Math.floor(Math.random() * 20)} contributions`;
+           grid.appendChild(cell);
+       }
+
+       // Copy README functionality
+       function copyREADME() {
+           const readmeText = `# Hello, I'm Alex Morgan 👋
+
+## Data Scientist & Creative Developer
+
+Passionate about transforming complex data into compelling visual stories and intelligent applications.
+
+### 🎯 Current Focus
+- Data Science & Machine Learning
+- Full Stack Development
+- Interactive Data Visualization
+
+### 💻 Tech Stack
+
+**Languages:**
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Go](https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white)
+![Rust](https://img.shields.io/badge/-Rust-000000?style=flat-square&logo=rust&logoColor=white)
+
+**Frameworks & Libraries:**
+![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/-Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+
+**Data & Cloud:**
+![AWS](https://img.shields.io/badge/-AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
+![GCP](https://img.shields.io/badge/-GCP-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Kafka](https://img.shields.io/badge/-Kafka-231F20?style=flat-square&logo=apache-kafka&logoColor=white)
+
+**Tools & DevOps:**
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
+
+### 📊 GitHub Stats
+
+![Alex's GitHub stats](https://github-readme-stats.vercel.app/api?username=alex-morgan&show_icons=true&theme=github_dark)
+
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=alex-morgan&theme=github-dark-blue)
+
+### 🌟 Featured Projects
+
+- **[predictive-analytics-platform](https://github.com/alex-morgan/predictive-analytics-platform)** - Real-time forecasting system using TensorFlow and React
+- **[carbon-footprint-tracker](https://github.com/alex-morgan/carbon-footprint-tracker)** - Enterprise environmental impact monitoring dashboard
+- **[ml-pipeline-framework](https://github.com/alex-morgan/ml-pipeline-framework)** - Scalable ML pipeline with Apache Kafka and Spark
+
+### 📫 Connect With Me
+
+[![Twitter](https://img.shields.io/badge/-Twitter-1DA1F2?style=flat-square&logo=twitter&logoColor=white)](https://twitter.com/alexmorgan)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/alexmorgan)
+[![Email](https://img.shields.io/badge/-Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:alex@example.com)
+
+---
+
+💡 *"The goal is to turn data into information, and information into insight."*`;
+
+           navigator.clipboard.writeText(readmeText).then(() => {
+               const notification = document.getElementById('copy-notification');
+               notification.classList.remove('translate-y-20', 'opacity-0');
+               setTimeout(() => {
+                   notification.classList.add('translate-y-20', 'opacity-0');
+               }, 3000);
+           });
+       }
+
+       // Add hover effects to contribution cells
+       document.querySelectorAll('.contribution-cell').forEach(cell => {
+           cell.addEventListener('mouseenter', function() {
+               this.style.transform = 'scale(1.5)';
+               this.style.zIndex = '100';
+           });
+           cell.addEventListener('mouseleave', function() {
+               this.style.transform = 'scale(1)';
+               this.style.zIndex = '1';
+           });
+       });
+   </script>
+</body>
+</html>
