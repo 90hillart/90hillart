@@ -1,9 +1,9 @@
-# Hello, I'm Alex Morgan
+# Hello, I'm Hilary Wekesa
 
 <p align="center">
   <img src="https://img.shields.io/badge/Focus-Data%20Science-blue?style=flat-square&logo=python&logoColor=white" alt="Data Science">
   <img src="https://img.shields.io/badge/Role-Full%20Stack%20Developer-green?style=flat-square&logo=javascript&logoColor=white" alt="Full Stack">
-  <img src="https://img.shields.io/badge/Location-San%20Francisco-orange?style=flat-square&logo=google-maps&logoColor=white" alt="Location">
+  <img src="https://img.shields.io/badge/Location-MERU%20KENYA-orange?style=flat-square&logo=google-maps&logoColor=white" alt="Location">
   <img src="https://img.shields.io/badge/Open%20to-Collaboration-purple?style=flat-square&logo=handshake&logoColor=white" alt="Open to Work">
   <img src="https://komarev.com/ghpvc/?username=alex-morgan&color=blueviolet&style=flat-square" alt="Profile Views">
 </p>
@@ -14,9 +14,9 @@
 - 🌱 Exploring Rust for high-performance data processing
 - 👯 Open to collaborate on open-source data visualization projects
 - 💬 Ask me about TensorFlow, React, and cloud architectures
-- 📫 How to reach me: [alex@example.com](mailto:alex@example.com)
+- 📫 How to reach me: [wekesahillary30@gmail.com](mailto:wekesahillary30@gmail.com)
 - 😄 Pronouns: he/him
-- ⚡ Fun fact: I once built a weather prediction model using only 3 months of historical data
+- ⚡ Fun fact: I once built a marketing campaign analyzer with only data from 3 previous months
 
 ---
 
@@ -79,18 +79,18 @@
 ## 📊 GitHub Analytics
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=alex-morgan&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9" />
-  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=alex-morgan&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=30363d&ring=58a6ff&fire=ff6b6b&currStreakLabel=58a6ff" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=90hillart&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=58a6ff&text_color=c9d1d9" />
+  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=90hillart&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=30363d&ring=58a6ff&fire=ff6b6b&currStreakLabel=58a6ff" />
 </div>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=alex-morgan&bg_color=0d1117&color=58a6ff&line=8957e5&point=db61a2&area=true&hide_border=true&custom_title=Contribution%20Graph" width="100%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=90hillart&bg_color=0d1117&color=58a6ff&line=8957e5&point=db61a2&area=true&hide_border=true&custom_title=Contribution%20Graph" width="100%" />
 </div>
 
 ### 📆 Contribution Calendar
 
 <div align="center">
-  <img src="https://ghchart.rshah.org/alex-morgan" alt="Alex Morgan's GitHub Contribution Chart" />
+  <img src="https://ghchart.rshah.org/90hillart" alt="90hillart's GitHub Contribution Chart" />
 </div>
 
 <br />
@@ -98,7 +98,7 @@
 ### 📈 Language Distribution
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=alex-morgan&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=90hillart&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" alt="Top Languages" />
 </div>
 
 <details>
@@ -169,7 +169,7 @@ Rust        ██░░░░░░░░░░░░░░░░░░░░�
 ## 🏆 Achievements
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=alex-morgan&theme=darkhub&no-frame=true&row=1&column=6" alt="GitHub Trophies" />
+  <img src="https://github-profile-trophy.vercel.app/?username=90hillart&theme=darkhub&no-frame=true&row=1&column=6" alt="GitHub Trophies" />
 </p>
 
 <p align="center">
@@ -184,13 +184,13 @@ Rust        ██░░░░░░░░░░░░░░░░░░░░�
 ## 🤝 Let's Connect
 
 <p align="center">
-  <a href="https://twitter.com/alexmorgan">
+  <a href="https://twitter.com/hillary90">
     <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" />
   </a>
-  <a href="https://linkedin.com/in/alexmorgan">
+  <a href="https://linkedin.com/in/hilary wekesa">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
-  <a href="mailto:alex@example.com">
+  <a href="wekesahillary30@gmail.com">
     <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
   <a href="https://reddit.com/u/alexmorgan">
@@ -202,7 +202,7 @@ Rust        ██░░░░░░░░░░░░░░░░░░░░�
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Website-https://alexmorgan.dev-58a6ff?style=flat-square&logo=google-chrome&logoColor=white" />
+  <img src="https://img.shields.io/badge/Website-https://90hillart-58a6ff?style=flat-square&logo=google-chrome&logoColor=white" />
 </p>
 
 ---
@@ -223,7 +223,7 @@ Go           0 hrs 58 mins  ██░░░░░░░░░░░░░░░�
 
 <div align="center">
   <p>
-    <img src="https://komarev.com/ghpvc/?username=alex-morgan&color=blueviolet&style=flat-square" alt="Profile Views" />
+    <img src="https://komarev.com/ghpvc/?username=90hillart&color=blueviolet&style=flat-square" alt="Profile Views" />
     &nbsp;&nbsp;
     <img src="https://img.shields.io/github/followers/alex-morgan?style=flat-square&logo=github&label=Followers&color=58a6ff" />
   </p>
