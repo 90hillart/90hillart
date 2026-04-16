@@ -16,8 +16,14 @@
 - 💬 Ask me about Python, Java and cpp architectures
 - 📫 How to reach me: [wekesahillary30@gmail.com](mailto:wekesahillary30@gmail.com)
 - 😄 Pronouns: he/him
-- ⚡ Fun fact: I once built a marketing campaign analyzer with only data from 3 previous months
-
+- ⚡ Fun fact: I once built a marketing campaign analyzer with only data from 3 previous months.
+- 
+In an era characterized by exponential data proliferation and
+increasingly intricate computational ecosystems, I operate at the nexus of statistical inference, machine
+learning, and full-stack software engineering. My professional endeavor is centered on the meticulous
+transmutation of high-dimensional datasets into coherent, actionable intelligence, while simultaneously
+engineering scalable, resilient, and architecturally sound digital systems that exhibit both functional
+robustness and semantic clarity.
 ---
 
 ## 🧰 Tech Stack
@@ -71,9 +77,42 @@
         <img src="https://img.shields.io/badge/Sci-kit learn-7B42BC?style=flat-square&logo=scikitlearn&logoColor=white" />
       </p>
     </td>
-  </tr>
-</table>
+    ....
+<div align="center">
+ <table style="
+  background:#0b0f1a;
+  border:1px solid #00f5ff;
+  box-shadow:0 0 25px #00f5ff;
+  border-radius:12px;
+  padding:15px;
+  width:60%;
+">
 
+   <tr>
+     <td align="center">
+ <h3 style="color:#00f5ff; text-shadow:0 0 10px #00f5ff;">
+        🤝 SOFT SKILLS
+      </h3>
+
+ <p style="color:#c9d1d9; font-size:15px; line-height:1.8;">
+
+   🗣️ Communication & Collaboration<br/>
+        🤝 Teamwork & Cross-functional Work<br/>
+        🧠 Problem Solving & Critical Thinking<br/>
+        🎯 Leadership & Decision Making<br/>
+        🔄 Adaptability & Fast Learning<br/>
+        ⏱️ Time Management & Productivity<br/>
+
+   </p>
+
+   <img src="https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif" width="180"/>
+
+  </td>
+ </tr>
+ 
+ </table>
+
+</div>
 ---
 
 ## 📊 GitHub Analytics
