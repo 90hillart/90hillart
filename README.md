@@ -5,15 +5,15 @@
   <img src="https://img.shields.io/badge/Role-Full%20Stack%20Developer-green?style=flat-square&logo=javascript&logoColor=white" alt="Full Stack">
   <img src="https://img.shields.io/badge/Location-MERU%20KENYA-orange?style=flat-square&logo=google-maps&logoColor=white" alt="Location">
   <img src="https://img.shields.io/badge/Open%20to-Collaboration-purple?style=flat-square&logo=handshake&logoColor=white" alt="Open to Work">
-  <img src="https://komarev.com/ghpvc/?username=alex-morgan&color=blueviolet&style=flat-square" alt="Profile Views">
+  <img src="https://komarev.com/ghpvc/?username=90hillart&color=blueviolet&style=flat-square" alt="Profile Views">
 </p>
 
 **Data Scientist & Creative Developer** passionate about transforming complex data into **compelling visual stories** and **intelligent applications**.
 
 - 🔭 Currently working on scalable ML pipelines & real-time analytics
-- 🌱 Exploring Rust for high-performance data processing
+- 🌱 Exploring Python for high-performance data processing
 - 👯 Open to collaborate on open-source data visualization projects
-- 💬 Ask me about TensorFlow, React, and cloud architectures
+- 💬 Ask me about Python, Java and cpp architectures
 - 📫 How to reach me: [wekesahillary30@gmail.com](mailto:wekesahillary30@gmail.com)
 - 😄 Pronouns: he/him
 - ⚡ Fun fact: I once built a marketing campaign analyzer with only data from 3 previous months
@@ -29,22 +29,22 @@
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
         <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
-        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+        <img src="https://img.shields.io/badge/C-3178C6?style=flat-square&logo=C&logoColor=white" />
         <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" />
         <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" />
-        <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" />
-        <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" />
+        <img src="https://img.shields.io/badge/Java-00ADD8?style=flat-square&logo=java&logoColor=white" />
+        <img src="https://img.shields.io/badge/c++-000000?style=flat-square&logo=c++&logoColor=white" />
       </p>
     </td>
     <td width="50%" valign="top">
       <h3>⚛️ Frameworks & Libraries</h3>
       <p>
-        <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
-        <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white" />
-        <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
-        <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
+        <img src="https://img.shields.io/badge/PowerBI-61DAFB?style=flat-square&logo=powerbi&logoColor=black" />
+        <img src="https://img.shields.io/badge/Excel-000000?style=flat-square&logo=excel&logoColor=white" />
+        <img src="https://img.shields.io/badge/Pandas-06B6D4?style=flat-square&logo=Pandas&logoColor=white" />
+        <img src="https://img.shields.io/badge/Numpy-FF6F00?style=flat-square&logo=Numpy&logoColor=white" />
         <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
-        <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" />
+        <img src="https://img.shields.io/badge/Tableau-092E20?style=flat-square&logo=tableau&logoColor=white" />
       </p>
     </td>
   </tr>
@@ -54,7 +54,7 @@
       <p>
         <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white" />
         <img src="https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=google-cloud&logoColor=white" />
-        <img src="https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white" />
+        <img src="https://img.shields.io/badge/SQL-336791?style=flat-square&logo=sql&logoColor=white" />
         <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" />
         <img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apache-kafka&logoColor=white" />
         <img src="https://img.shields.io/badge/Spark-E25A1C?style=flat-square&logo=apache-spark&logoColor=white" />
@@ -63,12 +63,12 @@
     <td valign="top">
       <h3>🛠️ Tools & DevOps</h3>
       <p>
-        <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-        <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" />
+        <img src="https://img.shields.io/badge/Seaborn-2496ED?style=flat-square&logo=seaborn&logoColor=white" />
+        <img src="https://img.shields.io/badge/Matplotlib-326CE5?style=flat-square&logo=matplotlib&logoColor=white" />
         <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white" />
         <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" />
         <img src="https://img.shields.io/badge/GitLab_CI-FC6D26?style=flat-square&logo=gitlab&logoColor=white" />
-        <img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white" />
+        <img src="https://img.shields.io/badge/Sci-kit learn-7B42BC?style=flat-square&logo=scikitlearn&logoColor=white" />
       </p>
     </td>
   </tr>
@@ -107,9 +107,9 @@
 ```
 Python      ████████████████████████░░░░  45%
 JavaScript  ██████████████░░░░░░░░░░░░░░  25%
-TypeScript  ████████░░░░░░░░░░░░░░░░░░░░  15%
-Go          ██████░░░░░░░░░░░░░░░░░░░░░░  10%
-Rust        ██░░░░░░░░░░░░░░░░░░░░░░░░░░   5%
+java        ████████░░░░░░░░░░░░░░░░░░░░  15%
+c           ██████░░░░░░░░░░░░░░░░░░░░░░  10%
+cpp         ██░░░░░░░░░░░░░░░░░░░░░░░░░░   5%
 ```
 </details>
 
@@ -121,45 +121,45 @@ Rust        ██░░░░░░░░░░░░░░░░░░░░�
   <tr>
     <td width="50%">
       <h3><a href="#">predictive-analytics-platform</a></h3>
-      <p>Real-time forecasting system using TensorFlow and React, processing 1M+ data points daily.</p>
+      <p>Real-time forecasting system using python and R, processing 1M+ data points daily.</p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-        <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
-        <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
+        <img src="https://img.shields.io/badge/Java-FF6F00?style=flat-square&logo=java&logoColor=white" />
+        <img src="https://img.shields.io/badge/R-61DAFB?style=flat-square&logo=r&logoColor=black" />
       </p>
-      <p>⭐ 234 &nbsp; | &nbsp; 🍴 45</p>
+      <p>⭐ 10 &nbsp; | &nbsp; 🍴 45</p>
     </td>
     <td width="50%">
-      <h3><a href="#">carbon-footprint-tracker</a></h3>
-      <p>Interactive dashboard for enterprises to monitor and optimize their environmental impact.</p>
+      <h3><a href="#">Task Manager</a></h3>
+      <p>Interactive CRUD application for managing daily tasks.</p>
       <p>
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
-        <img src="https://img.shields.io/badge/D3.js-F9A03C?style=flat-square&logo=d3.js&logoColor=white" />
-        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" />
+        <img src="https://img.shields.io/badge/HTML-F7DF1E?style=flat-square&logo=html&logoColor=black" />
+        <img src="https://img.shields.io/badge/SQL-F9A03C?style=flat-square&logo=sql&logoColor=white" />
+        <img src="https://img.shields.io/badge/Python-339933?style=flat-square&logo=python&logoColor=white" />
       </p>
-      <p>⭐ 189 &nbsp; | &nbsp; 🍴 32</p>
+      <p>⭐ 1 &nbsp; | &nbsp; 🍴 0</p>
     </td>
   </tr>
   <tr>
     <td width="50%">
-      <h3><a href="#">ml-pipeline-framework</a></h3>
-      <p>Scalable machine learning pipeline framework with Apache Kafka and Spark integration.</p>
+      <h3><a href="#">-eda-titanic</a></h3>
+      <p>Performed exploratory data analysis on the titanic dataset and made analytics dashboard.</p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-        <img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apache-kafka&logoColor=white" />
-        <img src="https://img.shields.io/badge/Spark-E25A1C?style=flat-square&logo=apache-spark&logoColor=white" />
+        <img src="https://img.shields.io/badge/Excel-231F20?style=flat-square&logo=excel&logoColor=white" />
+        <img src="https://img.shields.io/badge/PoweBI-E25A1C?style=flat-square&logo=powerbi&logoColor=white" />
       </p>
-      <p>⭐ 567 &nbsp; | &nbsp; 🍴 89</p>
+      <p>⭐ 1 &nbsp; | &nbsp; 🍴 0</p>
     </td>
     <td width="50%">
-      <h3><a href="#">data-viz-components</a></h3>
-      <p>Reusable React components for advanced data visualization with D3.js integration.</p>
+      <h3><a href="#">AI Based Marketing Campaign Analyzer</a></h3>
+      <p>Automated a marketing campaign analyzer using Python.</p>
       <p>
-        <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-        <img src="https://img.shields.io/badge/D3.js-F9A03C?style=flat-square&logo=d3.js&logoColor=white" />
-        <img src="https://img.shields.io/badge/Storybook-FF4785?style=flat-square&logo=storybook&logoColor=white" />
+        <img src="https://img.shields.io/badge/Python-3178C6?style=flat-square&logo=python&logoColor=white" />
+        <img src="https://img.shields.io/badge/Excel-F9A03C?style=flat-square&logo=excel&logoColor=white" />
+        <img src="https://img.shields.io/badge/PowerBI-FF4785?style=flat-square&logo=powerbi&logoColor=white" />
       </p>
-      <p>⭐ 423 &nbsp; | &nbsp; 🍴 67</p>
+      <p>⭐ 2 &nbsp; | &nbsp; 🍴 6</p>
     </td>
   </tr>
 </table>
@@ -193,11 +193,11 @@ Rust        ██░░░░░░░░░░░░░░░░░░░░�
   <a href="wekesahillary30@gmail.com">
     <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://reddit.com/u/alexmorgan">
-    <img src="https://img.shields.io/badge/Reddit-FF4500?style=for-the-badge&logo=reddit&logoColor=white" />
+  <a href="https://whatsapp.com/u/wekesahillary">
+    <img src="https://img.shields.io/badge/WhatsApp-FF4500?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
-  <a href="https://discord.gg/">
-    <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
+  <a href="https://telegram.gg/">
+    <img src="https://img.shields.io/badge/Telegram-5865F2?style=for-the-badge&logo=telegram&logoColor=white" />
   </a>
 </p>
 
@@ -211,8 +211,8 @@ Rust        ██░░░░░░░░░░░░░░░░░░░░�
 
 ```text
 Python       6 hrs 42 mins  ████████████████░░░░░░░░   68%
-TypeScript   2 hrs 15 mins  ██████░░░░░░░░░░░░░░░░░░   22%
-Go           0 hrs 58 mins  ██░░░░░░░░░░░░░░░░░░░░░░   10%
+java         2 hrs 15 mins  ██████░░░░░░░░░░░░░░░░░░   22%
+cpp          0 hrs 58 mins  ██░░░░░░░░░░░░░░░░░░░░░░   10%
 ```
 
 ---
@@ -225,7 +225,7 @@ Go           0 hrs 58 mins  ██░░░░░░░░░░░░░░░�
   <p>
     <img src="https://komarev.com/ghpvc/?username=90hillart&color=blueviolet&style=flat-square" alt="Profile Views" />
     &nbsp;&nbsp;
-    <img src="https://img.shields.io/github/followers/alex-morgan?style=flat-square&logo=github&label=Followers&color=58a6ff" />
+    <img src="https://img.shields.io/github/followers/90hillart?style=flat-square&logo=github&label=Followers&color=58a6ff" />
   </p>
   <p>
     <strong>💡 <em>"The goal is to turn data into information, and information into insight."</em></strong>
