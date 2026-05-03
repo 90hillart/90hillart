@@ -7,6 +7,8 @@
   <img src="https://img.shields.io/badge/Open%20to-Collaboration-purple?style=flat-square&logo=handshake&logoColor=white" alt="Open to Work">
   <img src="https://komarev.com/ghpvc/?username=90hillart&color=blueviolet&style=flat-square" alt="Profile Views">
 </p>
+<img align="right" height="250" width="350" alt="GIF" src="https://user-images.githubusercontent.com/115187902/230700872-d5f44b85-56c7-4e27-80a4-6e2db901e60c.gif"/>
+<img align="right" src="spacer.png"/>
 
 **Data Scientist & Creative Developer** passionate about transforming complex data into **compelling visual stories** and **intelligent applications**.
 
