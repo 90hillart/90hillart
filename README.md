@@ -1,4 +1,7 @@
 # Hello, I'm Hilary Wekesa
+<p align="center">
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6C63FF&center=true&vCenter=true&random=false&width=600&lines=AI%2FML+Engineer+%7C+Data+Scientist;Building+LLM+Systems+%26+RAG+Pipelines;MSc+AI+%40+LUMS+%7C+Pushing+AI+Boundaries" alt="Typing SVG" /></a>
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Focus-Data%20Science-blue?style=flat-square&logo=python&logoColor=white" alt="Data Science">
