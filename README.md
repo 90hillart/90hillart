@@ -280,4 +280,7 @@ cpp          0 hrs 58 mins  ██░░░░░░░░░░░░░░░�
     <sub>⭐️ If you like my work, consider giving a star to my repositories! ⭐️</sub>
   </p>
 </div>
+<p align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,12,19,20,24&height=100&section=footer"/>
+</p>
 ```
